@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mini Vue</title>
+</head>
+<body>
+  <div id="app">
+    <!-- v-for -->
+    <ul id="example-1">
+      <li v-for="item in items" :key="item.message">
+        Test: {{ item.message }}
+      </li>
+    </ul>
+    <!-- v--html -->
+    <div>
+      <p>Using mustaches: {{ rawHtml }}</p>
+      <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+    </div>
+  </div>
+  <script src="vue.js"></script>
+  <script>
+    let vm = new Vue({
+      el: '#app',
+      data: {
+        items: [
+          { message: 'Foo' },
+          { message: 'Bar' }
+        ],
+        rawHtml: '<p>THIS IS HTML</p>'
+      }
+    })
+  </script>
+</body>
+</html>

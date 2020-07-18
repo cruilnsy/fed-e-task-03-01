@@ -1,0 +1,44 @@
+body {
+  background: black;
+  font-family: sans-serif;
+  color: #EFDFBB;
+}
+
+#app {
+  max-width: 40em;
+  margin: 2rem auto;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  color: grey;
+  padding: .5em .8em;
+}
+.btn.active {
+  background: grey;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+  color: #EFDFBB;
+}
+
+.add {
+  float: right;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: inline-flex;
+  margin: 1em;
+}
+.row > div:nth-child(1) {
+  flex: 1
+}
+.row > div:nth-child(2) {
+  flex: 2
+}
+.row > div:nth-child(3) {
+  flex: 5
+}
